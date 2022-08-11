@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="LIGHTNING RECORD FORM-CONTACT" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+                object-api-name={contactName}
+                fields={fields}
+                record-id={recordId}
+                layout-type="Compact"
+                mode="view"
+                columns="2"
+                onsuccess={successHandler}
+                onerror={errorHandler}>
+
+            </lightning-record-form>
+        </div>
+
+    </lightning-card>
+</template>

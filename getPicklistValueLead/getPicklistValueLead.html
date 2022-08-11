@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES LEAD SOURCE">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Select the Lead Source"
+                options={sourceOptions}
+                value={selectedSourcee}
+                onchange={changeHandler}> 
+            </lightning-combobox>
+            Selected Lead Sorce  is: {selectedSource}
+
+        </div>
+
+    </lightning-card>
+    
+</template>

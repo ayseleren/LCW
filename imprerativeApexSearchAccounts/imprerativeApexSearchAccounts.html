@@ -1,0 +1,29 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="IMPPERATIVE APEX" icon-name="standard:account">
+        <div class="slds-var-m-around_medium"> 
+            <lightning-combobox
+                label="Select the industry to see the accounts"
+                options={industryOptions}
+                value={selectedIndustry}
+                onchange={changeHandler}> 
+            </lightning-combobox>
+            <div class="slds-var-m-top_small">
+                <template if:true={accounts}>
+                   
+                    <strong>MATCHING ACCOUNTS</strong> <br/>
+                    <lightning-datatable
+                    key-field="Id"
+                    data={accounts}
+                    columns={columns}>
+                </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+        </div>
+      
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES STAGE">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Select the Industry type"
+                options={stageOptions}
+                value={selectedStage}
+                onchange={changeHandler}> 
+            </lightning-combobox>
+            Selected stage is: {selectedStage}
+
+        </div>
+
+    </lightning-card>
+    
+</template>

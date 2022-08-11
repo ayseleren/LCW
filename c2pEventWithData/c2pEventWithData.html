@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="C2P EVENT WITH DATA">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col sld-size_9-of-12 ">
+                    <lightning-input
+                    type="text"
+                    value={input}
+                    variant="label-hidden"
+                    onchange={changeHandler}>
+                </lightning-input>
+                </div>
+                <div class="slds-col sld-size_3-of-12 ">
+                    <lightning-button
+                    label="Show Details"
+                    variant="brand"
+                    onclick={clickHandler}>
+                </lightning-button>
+                </div>      
+            </div>
+            <div>{output.message}</div>
+            <div>{output.info}</div>
+
+            <template if:true={showDetails}>
+                <c-modal-record-view-form2  
+                record-id={contactId}
+                onclosemodal={closeHandler}>
+                </c-modal-record-view-form2>
+            </template>
+              
+        </div>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card style="color: #ff009d"  title="Contact Loop">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contacts} for:item="contact">
+
+                <div style="color: green;"
+                 key={contact}>Contact firstName is :{contact.firstName}, contact lastName is:{contact.lastName}, contact title is {contact.title}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
